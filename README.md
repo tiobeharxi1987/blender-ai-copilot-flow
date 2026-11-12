@@ -29,17 +29,11 @@ The scary part of AI in a production scene is not what it builds—it is what it
 
 Every command below is self-contained: open PowerShell, copy it, paste it, press Enter.
 
-1. Grab the release ZIP `blender-ai-copilot-flow.zip` from [Download][download-url] and save it to your Windows machine.
-2. Verify the installed Blender build on a standard Windows setup, then in Blender open **Edit → Preferences → Get Extensions → the ⋮ menu → Install from Disk**.
-   `powershell Get-ChildItem $env:ProgramFiles\Blender*\Blender*\blender.exe`
-3. Pick the ZIP in the installer, enable **blender-ai-copilot-flow**, and open the sidebar **3D Viewport → N → Copilot Flow**; the command opens your Downloads folder first.
-   `powershell Invoke-Item $env:USERPROFILE\Downloads`
-4. Choose a provider—OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama or a custom API—add your connection details and select a tool-calling model; the command checks a local Ollama server when that is your provider.
-   `powershell Invoke-RestMethod http://localhost:11434/api/tags`
-5. Send a message in Blender or click **Open Studio Window** and watch each step ask before it runs; the command confirms Blender is running.
-   `powershell Get-Process blender`
-6. Runtime profile: Windows x64 with Blender 4.2 or later, Blender kept open while Studio or an external client is in use; when the built-in MCP server is enabled, the command confirms its local endpoint.
-   `powershell Test-NetConnection 127.0.0.1 -Port 9876`
+1. Download **`mcp-for-blender-pro.zip`** from [Releases](../../releases/latest).
+2. In Blender, open **Edit → Preferences → Get Extensions → menu → Install from Disk**.
+3. Select the ZIP, enable **mcp-for-blender-pro**, then open **3D Viewport → N → MCP Pro**.
+4. Choose a provider, add your connection details and select a model.
+5. Send a message in Blender or click **Open Studio Window**.
 
 ## Features
 
